@@ -6,9 +6,20 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "console": "^0.7.2",
+    "d.js": "^0.7.5",
+    "epub-maker": "^1.2.0",
+    "handlebars": "^4.7.6",
+    "js-zip": "^1.0.1",
+    "jszip": "^3.5.0",
+    "jszip-utils": "^0.1.0",
+    "pretty": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "request-promise": "^4.2.5",
+    "slugify": "^1.4.4",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

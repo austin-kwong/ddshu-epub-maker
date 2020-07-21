@@ -1,25 +1,27 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "version": "0.0.1",
+  "short_name": "DDSHU ePub Maker",
+  "name": "Create an ePub from HTML links on a landing page",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Create an ePub from this site"
+  },
+  "icons": {
+    "16": "favicon.ico",
+    "48": "favicon.ico",
+    "128": "favicon.ico"
+  },
+  "permissions": ["webRequest", "<all_urls>", "tabs", "storage", "downloads"],
+  "content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'",
+  "background": {
+    "scripts": ["app/background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+    "matches": ["*://*.ddshu.net/*/opf.html"],
+    "js": ["app/content.js"]
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
